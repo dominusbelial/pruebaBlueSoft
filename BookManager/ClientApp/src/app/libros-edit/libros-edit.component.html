@@ -1,0 +1,76 @@
+<div class="row mt-5">
+  <div class="col-md-6 mx-auto">
+    <h2 class="text-center">Actualizar Libros</h2>
+    <div class="card mt-3">
+      <div class="card-body">
+        <form [formGroup]="libroForm" (ngSubmit)="updateLibro(libroForm.value)">
+          <!--<div class="form-group">
+    <label class="col-md-4">Autor </label>
+    <pre class="card card-block card-header mb-3">Model: {{selectedAutor}}</pre>
+    <ng-template #customItemTemplate let-model="item" let-index="index">
+      <h5>Nombre: {{model.Nombre}} Apellidos: {{ model.Apellidos }}</h5>
+    </ng-template>
+    <input formControlName="AutorId"
+           [typeahead]="dataAutor"
+           typeaheadOptionField="Nombre"
+           [typeaheadItemTemplate]="customItemTemplate"
+           class="form-control">
+  </div>-->
+          <div class="form-group">
+            <label class="col-md-4">LibroId </label>
+            <input type="text" class="form-control" disabled readonly formControlName="LibroId" />
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Autor </label>
+            <select class="form-control" formControlName="AutorId">
+              <option disabled>Seleccione un Autor</option>
+              <option *ngFor="let suit of dataAutor" value="{{suit.AutorId}}">{{suit.Nombre + '-' + suit.Apellidos}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Categoria </label>
+            <select class="form-control" formControlName="CategoriaId">
+              <option disabled>Seleccione una Categoria</option>
+              <option *ngFor="let suit of dataCategoria" value="{{suit.CategoriaId}}">{{suit.Nombre + '-' + suit.Descripcion}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Nombre </label>
+            <input type="text" class="form-control" formControlName="Nombre" />
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Descripcion </label>
+            <input type="text" class="form-control" formControlName="Descripcion" />
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">Isbn </label>
+            <input type="text" class="form-control" formControlName="Isbn" />
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary col-md-4" [disabled]="libroForm.invalid">Actualizar</button>
+            <a [routerLink]="['/libros']">
+
+              <button type="submit" class="btn btn-primary col-md-4 ml-1">Atras</button>
+            </a>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">UserCreated </label>
+            <input type="text" class="form-control" disabled readonly formControlName="UserCreated" />
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">UserModified </label>
+            <input type="text" class="form-control" disabled readonly formControlName="UserModified" />
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">DateCreated </label>
+            <input type="text" class="form-control" disabled readonly formControlName="DateCreated" />
+          </div>
+          <div class="form-group">
+            <label class="col-md-4">DateModified </label>
+            <input type="text" class="form-control" disabled readonly formControlName="DateModified" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

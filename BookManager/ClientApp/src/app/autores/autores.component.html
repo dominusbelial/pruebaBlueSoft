@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <h2>
+    Autor
+    <a class="float-right" [routerLink]="['/autores/add']">
+      <button type="button" class="btn btn-primary">Agregar</button>
+    </a>
+  </h2>
+  <table class="table table-bordered mt-5">
+    <thead>
+      <tr>
+        <th>AutorId</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>FechaNacimiento</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index;">
+        <td width="20">{{item.AutorId}}</td>
+        <td>{{item.Nombre}}</td>
+        <td>{{item.Apellidos}}</td>
+        <td>{{item.FechaNacimiento.substring(0,10)}}</td>
+        <td width="250">
+          <button type="button" class="btn btn-danger mr-1" (click)="deleteAutor(item.AutorId, i)">Borrar</button>
+          <a [routerLink]="['/autores/edit/', item.AutorId]">
+            <button type="button" class="btn btn-primary">Editar</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

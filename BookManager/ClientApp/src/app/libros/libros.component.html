@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <h2>
+    Libros
+    <a class="float-right" [routerLink]="['/libros/add']">
+      <button type="button" class="btn btn-primary">Agregar</button>
+    </a>
+  </h2>
+  <table class="table table-bordered mt-5">
+    <thead>
+      <tr>
+        <th>LibroId</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Isbn</th>
+        <th>Autor</th>
+        <th>Categoria</th>
+        <th>UserCreated</th>
+        <th>UserModified</th>
+        <th>DateCreated</th>
+        <th>DateModified</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index;">
+        <td width="20">{{item.LibroId}}</td>
+        <td>{{item.Nombre}}</td>
+        <td>{{item.Descripcion}}</td>
+        <td>{{item.Isbn}}</td>
+        <td>{{item.Autor.Nombre}}</td>
+        <td>{{item.Categoria.Nombre}}</td>
+        <td>{{item.UserCreated}}</td>
+        <td>{{item.UserModified}}</td>
+        <td>{{item.DateCreated.substring(0,10)}}</td>
+        <td>{{item.DateModified.substring(0,10)}}</td>
+        <td width="250">
+          <button type="button" class="btn btn-danger mr-1" (click)="deleteLibro(item.LibroId, i)">Borrar</button>
+          <a [routerLink]="['/libros/edit/', item.LibroId]">
+            <button type="button" class="btn btn-primary">Editar</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

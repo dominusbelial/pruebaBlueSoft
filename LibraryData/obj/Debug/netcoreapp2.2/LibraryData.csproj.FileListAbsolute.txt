@@ -1,0 +1,10 @@
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\bin\Debug\netcoreapp2.2\LibraryData.deps.json
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\bin\Debug\netcoreapp2.2\LibraryData.runtimeconfig.json
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\bin\Debug\netcoreapp2.2\LibraryData.runtimeconfig.dev.json
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\bin\Debug\netcoreapp2.2\LibraryData.dll
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\bin\Debug\netcoreapp2.2\LibraryData.pdb
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\obj\Debug\netcoreapp2.2\LibraryData.AssemblyInfoInputs.cache
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\obj\Debug\netcoreapp2.2\LibraryData.AssemblyInfo.cs
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\obj\Debug\netcoreapp2.2\LibraryData.dll
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\obj\Debug\netcoreapp2.2\LibraryData.pdb
+C:\Users\domingo\Desktop\PruebaBlueSoft\LibraryAdmin\BookManager\LibraryData\obj\Debug\netcoreapp2.2\LibraryData.csprojAssemblyReference.cache
